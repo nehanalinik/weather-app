@@ -71,7 +71,6 @@ const MainContent: React.FC<MainWeatherContentProps> = ({ userType }) => {
       { time: "6pm", condition: "Cloudy" },
       { time: "8pm", condition: "Raining" },
       { time: "10pm", condition: "Clear" },
-      { time: "12am", condition: "Clear" },
     ],
     recentlySearchedCities: ["Jaipur", "New Delhi", "Mumbai"],
   });
