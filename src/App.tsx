@@ -1,25 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+import { MainContent, Sidebar } from "./components";
+import { UserTypes } from './utils/AdviceData';
 
 function App() {
+  const [userGroup, setUserGroup] = useState<UserTypes>('Event Planners');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="min-h-screen flex flex-col md:flex-row bg-gray-900 text-white">
+      <Sidebar userGroup={userGroup} setUserGroup={setUserGroup}/>
+      <MainContent userType={userGroup} />
+    </section>
   );
 }
 
